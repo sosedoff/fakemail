@@ -1,8 +1,8 @@
 = Fakemail
 
-Small utility to debug/inspect email output from your Rails/Sinatra/Merb app. 
-Stores each email as 2 files: headers and content.
-Both text and html formats are supported.
+* Small utility to debug/inspect email output from your Rails/Sinatra/Merb app. 
+* Stores each email as 2 files: headers and content.
+* Both text and html formats are supported.
 
 == Installation
 
