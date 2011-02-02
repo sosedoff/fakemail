@@ -1,0 +1,21 @@
+= Fakemail
+
+Small utility to debug/inspect email output from your Rails/Sinatra/Merb app. 
+Stores each email as 2 files: headers and content.
+Both text and html formats are supported.
+
+== Installation
+
+Clone repository and copy fakemail into /usr/local/bin or /usr/bin folder.
+Change exec permissions if needed.
+
+ cp fakemail /usr/local/bin/fakemail
+ chmod +x /usr/local/bin/fakemail
+
+== Usage
+
+ # RAILS_ROOT/config/environments/development.rb
+ config.action_mailer.delivery_method = :sendmail 
+ config.action_mailer.sendmail_settings = {:location => "/usr/local/bin/fakemail"}
+
+Restart app, and its ready to go.
