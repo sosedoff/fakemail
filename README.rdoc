@@ -16,15 +16,23 @@ Install as a gem:
 
 == Usage
 
+Add gem dependency to your Gemfile:
+
+  group :development do
+    gem 'fakemail'
+  end
+
+
 To see where the actual script is:
 
   which fakemail
 
 === Usage: Rails
 
-  # RAILS_ROOT/config/environments/development.rb
+Edit your development environment file config/environments/development.rb:
+
   config.action_mailer.delivery_method = :sendmail 
-  config.action_mailer.sendmail_settings = {:location => "PATH_TO_FAKEMAIL"}
+  config.action_mailer.sendmail_settings = {:location => `which fakemail`.strip}
   
 Restart the app, and its ready to go.
 
